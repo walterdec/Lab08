@@ -26,7 +26,8 @@ public class WordDAO {
 			while (res.next()) {
 				parole.add(res.getString("nome"));
 			}
-
+			conn.close();
+			
 			return parole;
 
 		} catch (SQLException e) {
@@ -34,5 +35,4 @@ public class WordDAO {
 			throw new RuntimeException("Error Connection Database");
 		}
 	}
-
 }

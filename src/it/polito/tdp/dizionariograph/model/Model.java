@@ -42,13 +42,11 @@ public class Model {
 		char wordA[]=word1.toCharArray();
 		char wordB[]=word2.toCharArray();
 		for(int i=0; i<numeroLettere; i++) {
-			if(wordA[i]!=wordB[i]) {
+			if(wordA[i]!=wordB[i])
 				diff++;
-				if(diff>1) {
-					return false;
-					
-				}
-			}
+			
+			if(diff>1)
+				return false;
 		}
 		return true;
 	}
